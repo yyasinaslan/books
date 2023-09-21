@@ -1,0 +1,14 @@
+<div class="hstack justify-content-between mb-4">
+  <div>
+    <select class="form-select rounded-pill" (change)="selectCategory($event)">
+      <option value="">All Categories</option>
+      <option *ngFor="let category of categories()" [value]="category">{{category}}</option>
+    </select>
+  </div>
+  <button type="button" class="btn btn-primary rounded-pill" routerLink="/add-book">
+    <i class="bi bi-plus-lg me-1"></i> Add Book
+  </button>
+</div>
+<div class="book-grid mb-5">
+  <app-book-card *ngFor="let book of filteredBooks()" [book]="book"/>
+</div>

@@ -1,0 +1,6 @@
+<img class="book-cover" [ngSrc]="book.coverImageUrl" [alt]="'Cover of '+book.title" [fill]="true">
+<div class="book-category">{{book.category}}</div>
+<a [routerLink]="['/book', book.id]" class="book-info">
+  <div class="lead fw-bold">{{book.title}}</div>
+  <div class="small"><i class="bi bi-person-fill"></i> {{book.author}}</div>
+</a>

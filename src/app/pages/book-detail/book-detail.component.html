@@ -1,0 +1,38 @@
+<ng-container *ngIf="book; else notFoundTemplate">
+  <app-page-title title="Book Detail" class="mb-3"/>
+
+  <div class="d-flex flex-column flex-md-row align-items-start gap-3 mb-5">
+    <div class="flex-shrink-0 overflow-hidden rounded-3">
+      <img class="book-cover" [ngSrc]="book.coverImageUrl" width="200" height="300" [alt]="'Cover of '+book.title">
+    </div>
+    <div class="book-details">
+      <dl class="lh-sm">
+        <dt class="small fw-light">Title</dt>
+        <dd class="lead">{{book.title}}</dd>
+      </dl>
+
+      <dl class="lh-sm">
+        <dt class="small fw-light">Author</dt>
+        <dd>{{book.author}}</dd>
+      </dl>
+
+      <dl class="lh-sm">
+        <dt class="small fw-light">Category</dt>
+        <dd>{{book.category}}</dd>
+      </dl>
+
+      <dl class="lh-sm">
+        <dt class="small fw-light">Description</dt>
+        <dd>{{book.description}}</dd>
+      </dl>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #notFoundTemplate>
+  <div class="py-5 text-center text-danger">
+    <div><i class="bi bi-exclamation-triangle-fill display-1"></i></div>
+    <div class="lead mb-4">Book not found</div>
+    <a routerLink="/" class="btn btn-outline-primary border-0">Home</a>
+  </div>
+</ng-template>
