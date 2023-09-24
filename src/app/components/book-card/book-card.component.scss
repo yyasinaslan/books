@@ -9,6 +9,7 @@
   transition: outline 150ms ease-out, scale 150ms ease-out;
 
   outline: 0 solid rgba(var(--bs-primary-rgb), 0.9);
+  background-color: white;
 
   &:has(.book-info:hover,.book-info:focus-visible) {
     outline: 5px solid rgba(var(--bs-primary-rgb), 0.5);
@@ -39,7 +40,7 @@ img.book-cover {
 
   text-align: center;
 
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 5%, rgba(255, 255, 255, 0) 40%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 5%, rgba(255, 255, 255, 0) 40%);
 
 }
 
@@ -47,6 +48,7 @@ img.book-cover {
   position: absolute;
   bottom: 0.8rem;
   left: 0.8rem;
+  max-width: 70%;
   font-size: 0.8em;
   padding: 0 0.5rem;
   background-color: rgba(var(--bs-primary-rgb), 0.8);

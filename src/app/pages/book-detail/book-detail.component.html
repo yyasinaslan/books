@@ -2,8 +2,9 @@
   <app-page-title title="Book Detail" class="mb-3"/>
 
   <div class="d-flex flex-column flex-md-row align-items-start gap-3 mb-5">
-    <div class="flex-shrink-0 overflow-hidden rounded-3">
-      <img class="book-cover" [ngSrc]="book.coverImageUrl" width="200" height="300" [alt]="'Cover of '+book.title">
+    <div *ngIf="book.coverImageUrl" class="flex-shrink-0 overflow-hidden rounded-3">
+      <img class="book-cover" [ngSrc]="book.coverImageUrl" width="200" height="300"
+           [alt]="'Cover of '+book.title">
     </div>
     <div class="book-details">
       <dl class="lh-sm">

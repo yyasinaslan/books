@@ -1,13 +1,17 @@
 export interface ApiBook {
-  status: string,
-  code: number,
-  total: number,
-  data: Array<{
-    id: number,
-    title: string,
-    author: string,
-    genre: string,
-    description: string,
-    image: string
-  }>
+  items: Array<{
+    id: string,
+    volumeInfo: {
+      title?: string,
+      categories?: string[],
+      authors?: string[],
+      imageLinks?: {
+        smallThumbnail: string,
+        thumbnail: string
+      },
+      description?: string
+    }
+  }>;
+  kind: string,
+  totalItems: number
 }

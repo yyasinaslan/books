@@ -12,7 +12,7 @@ export const bookResolver: ResolveFn<Book | null> = async (route, state) => {
 
   const books = await firstValueFrom(bookService.getBooks());
 
-  const book = books.find(b => b.id == Number(id));
+  const book = books.find(b => b.id == id);
 
   if (!book) return null;
 
